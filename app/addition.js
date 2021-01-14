@@ -1,17 +1,17 @@
 class Addition {
-    constructor() {
+  constructor() {
 
-    };
+  };
 
-    additionOfNumbers(...args) {
-        let result = 0;
-        if (args.length === 1) {
-            return args[0];
-        } else {
-            for (let arg of args) result += arg;
-            return result;
-        }
-    };
+  additionOfNumbers(...args) {
+    let result = 0;
+    if (args.length === 1) {
+      return args[0];
+    } else {
+      for (const arg of args) result += arg;
+      return result;
+    }
+  };
 }
 
 module.exports = Addition;

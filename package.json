@@ -30,14 +30,8 @@
       "text"
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/stranger2626/mocha-unit-testing-example.git"
-  },
-  "author": "Matsvei Murashka",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/stranger2626/mocha-unit-testing-example/issues"
-  },
-  "homepage": "https://github.com/stranger2626/mocha-unit-testing-example#readme"
+  "devDependencies": {
+    "eslint": "^7.17.0",
+    "eslint-config-google": "^0.14.0"
+  }
 }
