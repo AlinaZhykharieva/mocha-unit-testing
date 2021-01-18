@@ -7,7 +7,7 @@ class Multiplication {
     if (args.length === 0) {
       return 0;
     } else {
-      return [...args].reduce((a, b) => a * b);
+      return args.reduce((a, b) => a * b);
     }
   };
 }
