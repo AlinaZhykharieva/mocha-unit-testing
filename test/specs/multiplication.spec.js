@@ -44,13 +44,9 @@ describe('addition of all parameters', () => {
       expect(multiplication.multiplicationOfNumbers(testData.firstFactor, testData.secondFactor, testData.thirdFactor))
           .to.be.equal(testData.result);
     }));
-  [
-    {skip: false, result: 0},
 
-  ].forEach((testData) =>
-    (testData.skip ? it.skip : it)
-    (`${testData.skip || ''} Check addition without parameters`, () => {
-      expect(multiplication.multiplicationOfNumbers())
-          .to.be.equal(testData.result);
-    }));
+    it ('Check multiplication without parameters', () => {
+      const callWithError = () => multiplication.multiplicationOfNumbers();
+      expect(callWithError).to.throw(`No arguments passed to function!`);
+  });
 });
