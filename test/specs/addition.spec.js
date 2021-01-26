@@ -1,8 +1,10 @@
 const Addition = require('../../app/addition');
 const {expect} = require('chai');
+const chai = require('chai');
 
 describe('addition of all parameters', () => {
   let addition;
+  let spy;
 
   beforeEach(() => {
     addition = new Addition();
@@ -43,13 +45,9 @@ describe('addition of all parameters', () => {
       expect(addition.additionOfNumbers(testData.firstTerm, testData.secondTerm, testData.thirdTerm))
           .to.be.equal(testData.result);
     }));
-  [
-    {skip: false, result: 0},
-
-  ].forEach((testData) =>
-    (testData.skip ? it.skip : it)
-    (`${testData.skip || ''} Check addition without parameters`, () => {
-      expect(addition.additionOfNumbers())
-          .to.be.equal(testData.result);
-    }));
+  
+    it ('Check addition without parameters', () => {
+        const callWithError = () => addition.additionOfNumbers();
+        expect(callWithError).to.throw(`No arguments passed to function!`);
+    });
 });
